@@ -44,7 +44,7 @@ Given("admin berada di halaman detail order teratas", () => {
 
 When("admin menekan breadcrumb {string} di form order", (breadcrumbName) => {
   // Filament 3 breadcrumbs link
-  cy.get('.fi-breadcrumbs, ol, nav, body')
+  cy.get('.fi-breadcrumbs')
     .find('a')
     .contains(breadcrumbName)
     .first()

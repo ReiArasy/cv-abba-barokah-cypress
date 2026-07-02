@@ -11,14 +11,14 @@ Feature: Management Product UI and Navigation
     Then admin melihat tabel daftar produk
 
   Scenario: Admin membuka form tambah produk dan membatalkannya
-    When admin menekan tombol "Buat" produk di atas tabel
+    When admin menekan tombol "Tambah Produk" produk di atas tabel
     Then halaman diarahkan ke form tambah produk "/admin/products/create"
     When admin menekan tombol "Batal" di form produk
     Then halaman diarahkan kembali ke daftar produk "/admin/products"
 
   Scenario: Admin menggunakan breadcrumbs dari halaman tambah produk
     Given admin membuka form tambah produk baru
-    When admin menekan breadcrumb "Manage Produk" di form produk
+    When admin menekan breadcrumb "Produk" di form produk
     Then halaman diarahkan kembali ke daftar produk "/admin/products"
 
   Scenario: Admin membuka form ubah produk teratas dan membatalkannya
@@ -29,7 +29,7 @@ Feature: Management Product UI and Navigation
 
   Scenario: Admin menggunakan breadcrumbs dari halaman ubah produk
     Given admin membuka form ubah produk teratas baru
-    When admin menekan breadcrumb "Manage Produk" di form produk
+    When admin menekan breadcrumb "Produk" di form produk
     Then halaman diarahkan kembali ke daftar produk "/admin/products"
 
   Scenario: Admin mengklik baris data pada tabel produk untuk mengedit

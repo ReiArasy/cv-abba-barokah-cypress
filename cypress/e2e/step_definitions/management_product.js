@@ -15,7 +15,7 @@ Then("admin melihat tabel daftar produk", () => {
 // SCENARIO: Admin membuka form tambah produk dan membatalkannya
 When("admin menekan tombol {string} produk di atas tabel", (buttonLabel) => {
   // Filament 3 header action button
-  cy.get('.fi-header-actions, .fi-ac, body')
+  cy.get('header, .fi-header')
     .contains('a, button, span', buttonLabel)
     .first()
     .click({ force: true });
@@ -48,7 +48,7 @@ Given("admin membuka form tambah produk baru", () => {
 
 When("admin menekan breadcrumb {string} di form produk", (breadcrumbName) => {
   // Filament 3 breadcrumbs link
-  cy.get('.fi-breadcrumbs, ol, nav, body')
+  cy.get('.fi-breadcrumbs')
     .find('a')
     .contains(breadcrumbName)
     .first()

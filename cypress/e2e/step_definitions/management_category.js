@@ -15,7 +15,7 @@ Then("admin melihat tabel daftar kategori", () => {
 // SCENARIO: Admin membuka form tambah kategori dan membatalkannya
 When("admin menekan tombol {string} kategori di atas tabel", (buttonLabel) => {
   // Filament 3 header action button
-  cy.get('.fi-header-actions, .fi-ac, body')
+  cy.get('header, .fi-header')
     .contains('a, button, span', buttonLabel)
     .first()
     .click({ force: true });
@@ -48,7 +48,7 @@ Given("admin membuka form tambah kategori baru", () => {
 
 When("admin menekan breadcrumb {string}", (breadcrumbName) => {
   // Filament 3 breadcrumbs link
-  cy.get('.fi-breadcrumbs, ol, nav, body')
+  cy.get('.fi-breadcrumbs')
     .find('a')
     .contains(breadcrumbName)
     .first()

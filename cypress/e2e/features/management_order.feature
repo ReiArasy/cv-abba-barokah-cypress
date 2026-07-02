@@ -17,7 +17,7 @@ Feature: Management Order UI and Navigation
 
   Scenario: Admin menggunakan breadcrumbs dari halaman detail order
     Given admin berada di halaman detail order teratas
-    When admin menekan breadcrumb "Manage Pesanan" di form order
+    When admin menekan breadcrumb "Pesanan" di form order
     Then halaman diarahkan kembali ke daftar order "/admin/orders"
 
   Scenario: Admin mengklik baris data pada tabel order untuk melihat detail

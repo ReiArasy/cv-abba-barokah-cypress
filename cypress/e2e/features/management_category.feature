@@ -11,7 +11,7 @@ Feature: Management Category UI and Navigation
     Then admin melihat tabel daftar kategori
 
   Scenario: Admin membuka form tambah kategori dan membatalkannya
-    When admin menekan tombol "Buat" kategori di atas tabel
+    When admin menekan tombol "Tambah Kategori Produk" kategori di atas tabel
     Then halaman diarahkan ke form tambah kategori "/admin/categories/create"
     When admin menekan tombol "Batal" di form kategori
     Then halaman diarahkan kembali ke daftar kategori "/admin/categories"
